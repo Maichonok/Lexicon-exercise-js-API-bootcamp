@@ -176,7 +176,9 @@ async function showVisitorsWithAllergies() {
 
 function renderVisitor(visitor) {
   const div = document.createElement("div");
-  div.textContent = visitor.name;
+  div.textContent = `${visitor.name} - Allergies: ${visitor.allergies.join(
+    ", "
+  )}`;
   document.body.appendChild(div);
 }
 
